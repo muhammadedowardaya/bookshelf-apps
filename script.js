@@ -15,7 +15,6 @@ const RENDER_EVENT = 'render-book';
 
 const myAlert = {
     show: function (title, message) {
-
         const alertBtnYes = document.querySelector('.action-alert button.yes');
         const alertBtnNo = document.querySelector('.action-alert button.no');
         alertBtnYes.classList.remove('show');
@@ -233,13 +232,10 @@ document.addEventListener(RENDER_EVENT, function () {
     uncompletedbookList.innerHTML = '';
     completeBookshelfList.innerHTML = '';
 
-
     const searchTitle = document.getElementById('searchBookTitle').value.toLowerCase();
 
     for (bookItem of books) {
-
         const bookElement = makebook(bookItem);
-
         if (bookItem.title.toLowerCase().includes(searchTitle)) {
             if (bookItem.isCompleted) {
                 completeBookshelfList.append(bookElement);
@@ -247,14 +243,8 @@ document.addEventListener(RENDER_EVENT, function () {
                 uncompletedbookList.append(bookElement);
             }
         }
-
-
     }
 });
-
-
-
-
 
 
 function saveData() {
