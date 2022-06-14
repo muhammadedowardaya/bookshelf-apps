@@ -1,15 +1,3 @@
-/**
- * [
-    {
-        id: string | number,
-        title: string,
-        author: string,
-        year: number,
-        isComplete: boolean,
-    }
- * ]
- */
-
 const books = [];
 const RENDER_EVENT = 'render-book';
 
@@ -164,14 +152,6 @@ function addbook() {
     const author = document.getElementById('inputBookAuthor').value;
     const year = document.getElementById('inputBookYear').value;
     let IsComplete = document.querySelector('#inputBookIsComplete:checked');
-
-    if (IsComplete !== null) {
-        // IsComplete = true;
-        console.info('iscomplete: true')
-    } else {
-        // IsComplete = false;
-        console.info('iscomplete: false')
-    }
 
     const generatedID = generateId();
     const bookObject = generateBookObject(generatedID, title, author, year, IsComplete);
